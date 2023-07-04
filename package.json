@@ -1,0 +1,11 @@
+{
+  "name": "fakestore-backend",
+  "version": "1.0.0",
+  "description": "Fakestore backend for iOS and Android applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "HishD",
+  "license": "ISC"
+}
