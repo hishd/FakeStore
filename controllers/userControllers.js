@@ -53,10 +53,6 @@ const registerUser = asyncHandler(async (req, res) => {
     throw new Error("Invalid email address");
   }
 
-  if (!req.body.authType) {
-    throw new Error("No authentication type!");
-  }
-
   if (!validatePassword(password)) {
     throw new Error(
       "Password should between 6-20 chars, with at least one numeric, uppercase & lowercase digit."
@@ -102,6 +98,7 @@ const getUserProfile = asyncHandler(async (req, res) => {
       name: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
+      isVendor: user.isVendor,
     });
   } else {
     res.status(404);
